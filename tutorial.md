@@ -79,6 +79,8 @@ using std::string;
 cout << var_name << "something" << var2_name << "something2" << endl;
 ```
 
+> Note: you can omit `endl`, then all cout from the program will form only one line.
+
 - For cin, define the type of the variable you want to input first:
 
 ```cpp
@@ -92,6 +94,14 @@ cin >> a;
 getline(cin, var_name);
 cout << var_name;
 return 0;
+```
+
+- This is a good example for using `cin` and `cout`:
+
+```cpp
+int score;
+cout << "How much do you want";
+cin >> score;
 ```
 
 ## 3. Compile and run:
@@ -108,3 +118,79 @@ To run, run this right after compile (or in the same directory):
 ./pro_name
 ```
 ## This is the end of part I, go to see `phase1.cpp` to see more details for code usage.
+
+# Part II (260529)
+
+## 1. If, elif and else:
+
+- The most basic: only include if and else:
+
+```cpp
+string result;
+if (score >= 60) {
+    result = "PASS";
+} else {
+    result = "FAIL";
+}
+```
+
+- The usage of If, else if and else are shown below, (detailed meanings of the three were omitted because it has been learnt in Python), (var_name was included in conditions):
+
+```cpp
+if (condition_1)       thing_you_want_1;
+else if (condition_2)  thing_you_want_2;
+else if (condition_3)  thing_you_want_3;
+else                   thing_you_want_4;
+```
+
+- Also, if you want to write if and else in one line, do like this:
+
+```cpp
+string var_name = (condition) ? var_value_if_true : var_value_if_false;
+cout << var_name << endl;
+```
+
+- The `switch (var_name)` method:
+
+```cpp
+switch (var_name) {
+    case var_value_1: thing_you_want_1; break;
+    case var_value_2: thing_you_want_2; break;
+    case var_value_3: thing_you_want_3; break;
+    ...
+    case var_value_n: case var_value_a: case var_value_b:
+        thing_you_want_for_them; break;
+    default: thing_you_want_for_unexpected_values;
+    }
+```
+
+> Note:
+
+> 1. The `break` at the end of every case is needed, or it cannot stop;
+
+> 2. You can add a lot of cases under a same operation, like what we did to value n, a, and b.
+
+> 3. the `default` is for when the valuable of the variable does not match any of the cases, like what `else` do in a `if`, `else if` and `else` environment.
+
+## 2. Loop:
+
+Note: In loop, we can use this to combine a lot of conditions: `con_1 || con_2`
+
+1. For loop, the template for that is this:
+
+```cpp
+for (initialisation; condition; update) {
+    // code to repeat
+}
+```
+
+2. While loop, the template is this:
+
+```cpp
+while (condition) {
+    // code to repeat
+}
+```
+
+3. Do-while loop, the template is this:
+
