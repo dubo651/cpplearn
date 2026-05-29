@@ -11,6 +11,6 @@ int main(){
     cout << "his number is" << a << endl;
     cout << "the price" << frac << endl;
     cout << name << "'s grade is" << Ce << endl;
-    return 0
+    return 0;
 }
 
