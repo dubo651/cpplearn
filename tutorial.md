@@ -19,7 +19,7 @@ Most of the package include using is listed below:
 
 | Package_name     | what_it_give |
 | ----------- | ----------- |
-| iostream      | cint, cout, cerr      |
+| iostream      | cin, cout, cerr      |
 | string   | give you info about string |
 | sstream  | treat a string like stream |
 
@@ -50,7 +50,7 @@ using std::string;
 | s.size()   | same as length |
 | s.at(0) | same to `s[0]` |
 | s.find("something") | returns the index where "something" starts |
-| s.replace(from_index, len_index, "change_to" | returns as the discription |
+| s.replace(start_pos, length, "new_string") | returns as the discription |
 | s.empty() | check whether the string is full or empty |
 | s.erase(a, b) | removes b chars starting at index a |
 | s + "another one" | combine string |
@@ -86,4 +86,25 @@ string a;
 cin >> a;
 ```
 
+- For cin, the function `getline(cin, var_name)` is useful:
+
+```
+getline(cin, var_name);
+cout << var_name;
+return 0;
+```
+
+## 3. Compile and run:
+
+After you wrote your program, it is important to first compile, then run, to compile, run this in your terminal:
+
+```bash
+g++ myfile.cpp -o pro_name
+```
+
+To run, run this right after compile (or in the same directory):
+
+```bash
+./pro_name
+```
 ## This is the end of part I, go to see `phase1.cpp` to see more details for code usage.
