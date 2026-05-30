@@ -184,7 +184,17 @@ for (initialisation; condition; update) {
 }
 ```
 
-2. While loop, the template is this:
+2. For loop with a range -- the template is this:
+
+We compare this to what it did in python: `for i in gat` (gat is a assemble of elements):
+
+```cpp
+for (type_of_i i : gat) {
+    Things_you_want
+}
+```
+
+3. While loop, the template is this:
 
 ```cpp
 while (condition) {
@@ -192,5 +202,38 @@ while (condition) {
 }
 ```
 
-3. Do-while loop, the template is this:
+4. Do-while loop, the template is this:
 
+```cpp
+do {
+    // code to repeat
+} while (condition);
+```
+
+- Note: Key for this algorithm is doing once without check the condition, then check the condition, Take the below example:
+
+```cpp
+int output
+do {
+    cin >> output
+    cout << "give a valid output << endl;
+} while(output < 10);
+cout << "the output is << output << endl;
+```
+- In this case, the `do` goes first, it operated all `cin`, `cout` in the `do`, then check the `while`, if the `output` does not suitable for `while`, the `do` will also not operate for the second time.
+
+5. About the `break` and `continue`:
+
+```cpp
+for (int i = 1; i <=10; i++) {
+    if (i % 2 == 0) continue;
+    cout << i << endl;
+// That will print 1, 3, 5, 7, 9, and every number begins a new line
+```
+```cpp
+for (int i = 1; i <= 10; i++) {
+    if (i % 2 != 0) break;
+    cout << i << endl;
+// Outcone of that will be the same as the above
+```
+## This is the end of Part II, for practises, go to file `phase2.cpp`.
